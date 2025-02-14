@@ -1,16 +1,14 @@
-# This is a sample Python script.
+class Counter:
+    def __init__(self, max_number):
+        self.i = 0
+        self.max_number = max_number
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def __iter__(self):
+        self.i = 2
+        return self
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def __next__(self):
+        self.i += 3
+        if self.i > self.max_number:
+            raise StopIteration()
+        return self.i
