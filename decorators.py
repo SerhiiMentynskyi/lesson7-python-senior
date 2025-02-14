@@ -14,4 +14,4 @@ def calculate(expression):
 
 calculate = checker(calculate)
 
-calculate('33+33c')
+print(calculate('33+a33'))

@@ -12,3 +12,8 @@ class Counter:
         if self.i > self.max_number:
             raise StopIteration()
         return self.i
+
+
+count = Counter(50)
+for m in count:
+    print(m)
